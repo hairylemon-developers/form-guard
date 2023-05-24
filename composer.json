@@ -1,0 +1,19 @@
+{
+    "name": "hairylemon-developers/form-guard",
+    "autoload": {
+        "psr-4": {
+            "HairylemonDevelopers\\FormGuard\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Form Guard",
+            "description": "Form Guard addon"
+        },
+        "laravel": {
+            "providers": [
+                "HairylemonDevelopers\\FormGuard\\ServiceProvider"
+            ]
+        }
+    }
+}
