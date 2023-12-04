@@ -16,8 +16,3 @@ composer require hairylemon-developers/form-guard
 Once installed simply add the ```form_guard``` validator to fields in your form Blueprint that you want to protect.
 
 These should be added under Validation -> Rules on your field.
-
-
-## License
-
-Form Guard requires a license to be used while on a production site. You may use Form Guard without a license while your site is in development or testing.
