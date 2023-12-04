@@ -9,10 +9,10 @@ class ServiceProvider extends AddonServiceProvider
 {
     public function bootAddon()
     {
-        
-      $message = 'This field cannot contain URLs or email addresses.';
 
-      Validator::extend('form_guard', function($attribute, $value, $parameters){
+      $message = 'The :attribute field cannot contain URLs or email addresses.';
+
+      Validator::extend('form_guard', function($attribute, $value, $parameters) {
 
         $pattern = '#[-a-zA-Z0-9@:%_\+.~\#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~\#?&//=]*)?#si';
         if (preg_match_all($pattern, $value)) {
