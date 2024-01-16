@@ -14,7 +14,7 @@ class ServiceProvider extends AddonServiceProvider
 
       Validator::extend('form_guard', function($attribute, $value, $parameters) {
 
-        $pattern = '#[-a-zA-Z0-9@:%_\+.~\#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~\#?&//=]*)?#si';
+        $pattern = '/(?:href=[\'"]?([^\'"\s>]+)[\'"]?)|#[-a-zA-Z0-9@:%_\+.~#?&\/\/=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&\/\/=]*)?/siu';
         if (preg_match_all($pattern, $value)) {
           return false;
         } else {
